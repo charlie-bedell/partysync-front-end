@@ -4,6 +4,9 @@
 PartySync is a full-stack app that uses the Python-based Django REST Framework with a React.js frontend
 
 
+# back end link
+https://github.com/charlie-bedell/partysync-back-end
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
