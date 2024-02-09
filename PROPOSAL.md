@@ -41,8 +41,7 @@ Routing Spreadsheet:
 https://docs.google.com/spreadsheets/d/1Q1idavv3LZY2kAkccbwiL8dy9StduikUcQwfDO6hsJM/edit?usp=sharing
 
 React Map: 
-![PartySync Components](https://imgur.com/a/gHsJaAf "PartySync Components")
-
+![Component Hierarchy Diagram](https://github.com/Stephen-c-Kelly/partysync-front-end/assets/149907841/0d0d167e-a0cb-47eb-83a9-ff10541281a8)
 
 ## Website Links
 Deployed Website: 
