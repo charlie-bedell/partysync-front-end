@@ -1,6 +1,9 @@
-# PartySync: host parties, invite friends, collab on tunes, all in one app
+# PartySync 
+# Host parties, invite friends, collab on tunes, all in one app
 
-Plan events faster
+![PartySync](https://imgur.com/UsJClqo "PartySync")
+
+
 
 ## Project Description
 Party is a full-stack app that uses the Python-based Django REST Framework with a React.js frontend.
@@ -29,6 +32,8 @@ https://trello.com/b/Vdd8iW0j
 
 #### Wireframes
 
+![PartySync wizard hard at work](https://imgur.com/WpVLPEd "PartySync Wizard hard at work")
+
 
 ## Technical Architecture
 ERD Designs: 
@@ -38,6 +43,7 @@ Routing Spreadsheet:
 https://docs.google.com/spreadsheets/d/1Q1idavv3LZY2kAkccbwiL8dy9StduikUcQwfDO6hsJM/edit?usp=sharing
 
 React Map: 
+![PartySync Components](https://imgur.com/a/gHsJaAf "PartySync Components")
 
 
 ## Website Links
@@ -46,6 +52,7 @@ Deployed Website:
 Deployed Server:
 
 Server/Backend GitHub Repo: 
+https://github.com/charlie-bedell/partysync-back-end 
 
 Front-end Github Repo: 
 https://github.com/charlie-bedell/partysync-front-end
