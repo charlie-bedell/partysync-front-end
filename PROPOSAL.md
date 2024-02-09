@@ -1,6 +1,8 @@
-# PartySync: host parties, invite friends, collab on tunes, all in one app
+# PartySync 
+# Host parties, invite friends, collab on tunes, all in one app
 
-Plan events faster
+![Party](https://github.com/Stephen-c-Kelly/partysync-front-end/assets/149907841/0929675f-ad85-4f51-b7c0-1e5bed76cf81)
+
 
 ## Project Description
 Party is a full-stack app that uses the Python-based Django REST Framework with a React.js frontend.
@@ -28,6 +30,7 @@ FrontEnd Technologies used
 https://trello.com/b/Vdd8iW0j
 
 #### Wireframes
+![image](https://github.com/Stephen-c-Kelly/partysync-front-end/assets/149907841/69ac315a-451b-4708-b988-8ee19e51bb47)
 
 
 ## Technical Architecture
@@ -38,7 +41,7 @@ Routing Spreadsheet:
 https://docs.google.com/spreadsheets/d/1Q1idavv3LZY2kAkccbwiL8dy9StduikUcQwfDO6hsJM/edit?usp=sharing
 
 React Map: 
-
+![Component Hierarchy Diagram](https://github.com/Stephen-c-Kelly/partysync-front-end/assets/149907841/0d0d167e-a0cb-47eb-83a9-ff10541281a8)
 
 ## Website Links
 Deployed Website: 
@@ -46,6 +49,7 @@ Deployed Website:
 Deployed Server:
 
 Server/Backend GitHub Repo: 
+https://github.com/charlie-bedell/partysync-back-end 
 
 Front-end Github Repo: 
 https://github.com/charlie-bedell/partysync-front-end
