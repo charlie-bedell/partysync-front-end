@@ -1,8 +1,7 @@
 # PartySync 
 # Host parties, invite friends, collab on tunes, all in one app
 
-![PartySync](https://imgur.com/UsJClqo "PartySync")
-
+![Party](https://github.com/Stephen-c-Kelly/partysync-front-end/assets/149907841/0929675f-ad85-4f51-b7c0-1e5bed76cf81)
 
 
 ## Project Description
@@ -31,8 +30,7 @@ FrontEnd Technologies used
 https://trello.com/b/Vdd8iW0j
 
 #### Wireframes
-
-![PartySync wizard hard at work](https://imgur.com/WpVLPEd "PartySync Wizard hard at work")
+![image](https://github.com/Stephen-c-Kelly/partysync-front-end/assets/149907841/69ac315a-451b-4708-b988-8ee19e51bb47)
 
 
 ## Technical Architecture
