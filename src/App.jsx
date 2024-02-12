@@ -6,10 +6,11 @@ import Home from './pages/Home/Home.jsx';
 import Messages from './pages/Messages/Messages.jsx';
 import NewParty from './pages/NewParty/NewParty.jsx';
 import Profile from './pages/Profile/Profile.jsx';
+import PartyForm from './components/PartyForm/PartyForm.jsx';
 
 function App() {
   return (
-    <>
+    <div className='flex flex-col'>
       <Routes>
         <Route path="/home" element={<Home />}></Route>
         <Route path="/user/login" element={<Login />}></Route>
@@ -19,7 +20,8 @@ function App() {
         <Route path="/user/profile" element={<Profile />}/>
       </Routes>
       <NavBar />
-    </>
+      <PartyForm />
+    </div>
   );
 }
 
