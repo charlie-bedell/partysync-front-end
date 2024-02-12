@@ -4,8 +4,8 @@ import NavButton from '../NavButton/NavButton';
 const NavBar = (props) => {
 
 	return (
-		<header>
-      <nav className="flex center">
+		<footer className='bg-black'>
+      <nav className="flex center justify-around py-2">
         <Link to="/home">
           <NavButton text="Home"/>
         </Link>
@@ -15,11 +15,11 @@ const NavBar = (props) => {
         <Link to="/newparty">
           <NavButton text="New"/>
         </Link>
-        <Link to="/profile">
+        <Link to="/user/profile">
           <NavButton text="Profile"/>
         </Link>    
       </nav>
-		</header>
+		</footer>
 	);
 };
 

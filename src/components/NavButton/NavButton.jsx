@@ -7,7 +7,7 @@ const NavButton = (props) => {
 
   // manage styles here
   const tailwindIconStyles = 'h-5 w-5';
-  const tailwindTextStyles = 'font-bold center';
+  const tailwindTextStyles = 'font-bold';
 
   const icons = {
     "Home": <HomeIcon className={tailwindIconStyles}/>,
@@ -17,7 +17,7 @@ const NavButton = (props) => {
   };
  
 	return (
-		<div className='flex flex-column center'>
+		<div className='flex flex-col items-center text-white'>
 			{icons[text]}
       <p className={tailwindTextStyles}>{text}</p>
 		</div>
