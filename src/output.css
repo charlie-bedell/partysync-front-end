@@ -548,6 +548,22 @@ video {
   display: flex;
 }
 
+.h-5 {
+  height: 1.25rem;
+}
+
+.h-9 {
+  height: 2.25rem;
+}
+
+.w-5 {
+  width: 1.25rem;
+}
+
+.w-9 {
+  width: 2.25rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
