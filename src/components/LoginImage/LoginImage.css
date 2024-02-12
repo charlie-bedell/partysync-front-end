@@ -1,0 +1,12 @@
+.image {
+    top: -12px;
+    left: 0px;
+    width: 393px;
+    height: 691px;
+    border-radius: 8px;
+    background-image: url(./image.webp);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  

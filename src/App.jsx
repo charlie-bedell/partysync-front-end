@@ -14,7 +14,9 @@ function App() {
   const location = useLocation(); // This hook returns the location object
 
   // Check if the current pathname is not the landing page
-  const showNavBar = location.pathname !== '/';
+  const showNavBar = location.pathname !== '/' && location.pathname !== '/user/login' && location.pathname !== '/user/signup';
+
+
 
   return (
     <>

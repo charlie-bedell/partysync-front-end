@@ -1,4 +1,5 @@
-// import './Login.css';
+import Image from '../../components/LoginImage/LoginImage'
+
 
 const Login = (props) => {
 	
@@ -6,7 +7,7 @@ const Login = (props) => {
 
 	return (
 		<div>
-			
+		  <Image />
 		</div>
 	);
 };
