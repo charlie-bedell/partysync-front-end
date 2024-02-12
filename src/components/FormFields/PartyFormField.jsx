@@ -3,11 +3,12 @@
 const PartyFormField = (props) => {
 	
 	const { labelName, placeholderText } = props;
-
+  const classes = 'focus:outline-none bg-light-grey placeholder-grey pl-2 py-2 w-full';
+  
 	return (
 		<>
       <label name={labelName}>
-		    <input className='focus:outline-none bg-light-grey placeholder-grey py-1' placeholder={placeholderText} name="my-input"/>
+		    <input className={classes} placeholder={placeholderText} name="my-input"/>
       </label>
 		</>
 	);

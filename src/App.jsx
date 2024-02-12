@@ -10,7 +10,7 @@ import PartyForm from './components/PartyForm/PartyForm.jsx';
 
 function App() {
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col bg-pink'>
       <Routes>
         <Route path="/home" element={<Home />}></Route>
         <Route path="/user/login" element={<Login />}></Route>
