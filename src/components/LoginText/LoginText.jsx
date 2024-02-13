@@ -1,18 +1,20 @@
 import React from 'react';
-import './SignupText.css'
 
 const styles = {
   Text: {
-    color: '#ffffff',
-    fontSize: '24px',
+    color: '#ff9500',
+    fontSize: '34px',
     fontFamily: 'Roboto',
     fontWeight: '500',
-    lineHeight: '31px',
+    lineHeight: '42px',
+    position: 'absolute',
+    right: '52px',
+    top: '184px'
   },
 };
 
 const defaultProps = {
-  text: 'Sign Up',
+  text: 'Login',
 };
 
 const Text = (props) => {
@@ -24,4 +26,3 @@ const Text = (props) => {
 };
 
 export default Text;
-

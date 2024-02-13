@@ -6,10 +6,10 @@ const styles = {
     display: 'flex',
     justifyContent: 'center', 
     alignItems: 'center', 
-    height: '135vh', 
+    height: '100vh', 
     width: '100vw', 
-    position: 'absolute', 
-    top: 0,
+    position: 'absolute',
+    top: '116px', /* Adjust the value as needed */
     left: 0,
   },
   button: {

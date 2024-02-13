@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const styles = {
     ImageContainer: {
       position: 'absolute', // Ensure it's positioned absolutely relative to its nearest positioned ancestor or the body
@@ -17,7 +18,7 @@ const styles = {
   };
 
 const defaultProps = {
-  image: 'https://media3.giphy.com/media/jobZpJ2vUWRdS/giphy.webp?cid=acd21440yrplpf6kvzoisse4w5z58vkt1vo351mhwnluozhd&ep=v1_gifs_search&rid=giphy.webp&ct=g',
+  image: 'https://media3.giphy.com/media/3o6Yg2fNFfEryQ7VPW/giphy.webp?cid=acd21440i3y38wd58ow2atqaww2ml3dspljosi9sqj65rvkd&ep=v1_gifs_search&rid=giphy.webp&ct=g',
 }
 
 const Image = (props) => {
