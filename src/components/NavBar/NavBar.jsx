@@ -17,7 +17,7 @@ const NavBar = (props) => {
         </Link>
         <Link to="/user/profile">
           <NavButton text="Profile"/>
-        </Link>    
+        </Link>
       </nav>
 		</footer>
 	);
