@@ -1,4 +1,6 @@
-// import './Login.css';
+import Image from '../../components/LoginImage/LoginImage'
+import Text from '../../components/LoginText/LoginText'
+
 
 const Login = (props) => {
 	
@@ -6,7 +8,8 @@ const Login = (props) => {
 
 	return (
 		<div>
-			
+		  <Image />
+		  <Text />
 		</div>
 	);
 };

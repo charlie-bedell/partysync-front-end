@@ -1,0 +1,13 @@
+.purple-nav-button {
+    background-color: #0b4cff; /* Purple background */
+    color: white; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .purple-nav-button:hover {
+    background-color: #092ecc; /* Slightly darker on hover */
+  }
+  
