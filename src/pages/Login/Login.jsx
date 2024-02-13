@@ -1,5 +1,6 @@
-import Image from '../../components/LoginImage/LoginImage'
-import Text from '../../components/LoginText/LoginText'
+import LoginForm from '../../components/LoginForm/LoginForm';
+import Image from '../../components/LoginImage/LoginImage';
+import Text from '../../components/LoginText/LoginText';
 
 
 const Login = (props) => {
@@ -10,6 +11,7 @@ const Login = (props) => {
 		<div>
 		  <Image />
 		  <Text />
+      <LoginForm />
 		</div>
 	);
 };

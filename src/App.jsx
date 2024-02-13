@@ -19,7 +19,7 @@ function App() {
 
 
   return (
-    <>
+    <div className='flex flex-col h-full'>
       <Routes>
         <Route path="/" element={<Image />}></Route>
         <Route path="/home" element={<Home />}></Route>
@@ -30,7 +30,7 @@ function App() {
         <Route path="/user/profile" element={<Profile />}/>
       </Routes>
       {showNavBar && <NavBar />} {/* Conditionally render NavBar */}
-    </>
+    </div>
   );
 }
 
