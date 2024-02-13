@@ -1,4 +1,6 @@
 // import './Signup.css';
+import Header from '../../components/Header/Header'
+import Image from '../../components/SignupImage/SignupImage'
 
 const Signup = (props) => {
 	
@@ -6,7 +8,8 @@ const Signup = (props) => {
 
 	return (
 		<div>
-			
+			<Header text="Sign up" />
+			<Image />
 		</div>
 	);
 };
