@@ -6,7 +6,7 @@ import LoginFormField from "../FormFields/LoginFormField";
 
 const PartyForm = (props) => {
 	
-	// const {  } = props;
+	const { handleClick } = props;
 
 	return (
     <div className='m-2 p-2 bg-white'>
@@ -19,9 +19,7 @@ const PartyForm = (props) => {
         </div>
         <PartyFormField labelName="description" placeholderText="Info"/>
         <PartyFormField labelName="invite" placeholderText="Invite Friends!"/>
-        <SquareBlueButton text="Submit"></SquareBlueButton>
-        <LoginFormField labelText="Email"/>
-        <LoginFormField labelText="Password"/>
+        <SquareBlueButton handleClick={handleClick} text="Submit"></SquareBlueButton>
 		  </form>
     </div>
 	);
