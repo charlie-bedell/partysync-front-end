@@ -1,6 +1,7 @@
 // import './Signup.css';
-import Header from '../../components/Header/Header'
-import Image from '../../components/SignupImage/SignupImage'
+import Header from '../../components/Header/Header';
+import SignupForm from '../../components/SignupForm/SignupForm';
+import Image from '../../components/SignupImage/SignupImage';
 
 const Signup = (props) => {
 	
@@ -10,6 +11,7 @@ const Signup = (props) => {
 		<div>
 			<Header text="Sign up" />
 			<Image />
+      <SignupForm />
 		</div>
 	);
 };
