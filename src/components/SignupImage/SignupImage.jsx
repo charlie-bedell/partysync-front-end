@@ -24,6 +24,7 @@ const Image = (props) => {
     <div style={{
       ...styles.ImageContainer,
       backgroundImage: `url(${props.image ?? defaultProps.image})`,
+      zIndex: -99,
     }} />
   );
 };
