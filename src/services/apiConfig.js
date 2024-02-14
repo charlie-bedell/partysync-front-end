@@ -6,12 +6,17 @@ const getToken = () => {
     resolve(token ? `Bearer ${token}` : null);
   });
 };
+// const api = axios.create({
+//   baseURL:
+//     process.env.NODE_ENV === "production"
+//       ? "https://partysync-5fbbda6a7756.herokuapp.com"
+//       : "http://localhost:3000",
+// });
 
 const api = axios.create({
-  baseURL:
-    process.env.NODE_ENV === "production"
-      ? "https://partysync-5fbbda6a7756.herokuapp.com"
-      : "http://localhost:3000",
+  baseURL: import.meta.env.PROD
+    ? import.meta.env.VITE_API_BASE_URL
+    : "http://localhost:3000",
 });
 
 api.interceptors.request.use(
