@@ -10,8 +10,8 @@ const getToken = () => {
 const api = axios.create({
   baseURL:
     process.env.NODE_ENV === "production"
-      ? "https://your-deployed-app.herokuapp.com"
-      : "http://localhost:8000",
+      ? "https://partysync-5fbbda6a7756.herokuapp.com"
+      : "http://localhost:3000",
 });
 
 api.interceptors.request.use(

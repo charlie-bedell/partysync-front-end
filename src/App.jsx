@@ -8,6 +8,8 @@ import NewParty from './pages/NewParty/NewParty.jsx';
 import Profile from './pages/Profile/Profile.jsx';
 import Image from './pages/LandingPage/LandingPage.jsx';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { verifyUser } from './services/users.js';
 
 function App() {
 
@@ -16,6 +18,16 @@ function App() {
   // Check if the current pathname is not the landing page
   const showNavBar = location.pathname !== '/' && location.pathname !== '/user/login' && location.pathname !== '/user/signup';
 
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const user = await verifyUser();
+      user ? setUser(user) : setUser(null);
+    };
+
+    fetchUser();
+  }, []);
 
 
   return (
@@ -23,8 +35,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Image />}></Route>
         <Route path="/home" element={<Home />}></Route>
-        <Route path="/user/login" element={<Login />}></Route>
-        <Route path="/user/signup" element={<Signup />}></Route>
+        <Route path="/user/login" element={<Login setUser={setUser}/>}></Route>
+        <Route path="/user/signup" element={<Signup setUser={setUser}/>}></Route>
+
+        {/* add a ternary that controls if you can view these pages based on if you are a user or not */}
         <Route path="/messages" element={<Messages />}/>
         <Route path="/newparty" element={<NewParty />}/>
         <Route path="/user/profile" element={<Profile />}/>
