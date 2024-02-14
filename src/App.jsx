@@ -8,7 +8,6 @@ import NewParty from './pages/NewParty/NewParty.jsx';
 import Profile from './pages/Profile/Profile.jsx';
 import Image from './pages/LandingPage/LandingPage.jsx';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import MyInvites from './pages/MyInvites/MyInvites.jsx';
 
 function App() {
 
