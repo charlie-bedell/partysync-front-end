@@ -6,13 +6,10 @@ const getToken = () => {
     resolve(token ? `Bearer ${token}` : null);
   });
 };
-
 const api = axios.create({
-  baseURL:
-    process.env.NODE_ENV === "production"
-      ? "https://your-deployed-app.herokuapp.com"
-      : "http://localhost:8000",
+  baseURL:"https://partysync-5fbbda6a7756.herokuapp.com"
 });
+
 
 api.interceptors.request.use(
   async function (config) {
