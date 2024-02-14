@@ -7,30 +7,18 @@ import { getInvites } from '../../services/invites';
 import { useState, useEffect } from 'react';
 
 const MyInvites = () => {
-  const [profile, setProfile] = useState(null);
   const [invites, setInvites] = useState(null);
 
-  useEffect(() => {
-    
-    const fetchProfile = async () => {
-      try {
-        const response = await getProfile(); 
-        setProfile(response.data); 
-				console.log('end of grab profile,', profile)
-      } catch (error) {
-        console.error("Failed to fetch profile:", error);
-      }
-    };
-
-    fetchProfile();
-  }, []); 
+  // handle button click  (function that triggers post)
+  // add is invitation on party form
+  // make yes no maybe radial button Component then tell charlie about it
 
   useEffect(()=>{
     const fetchInvites= async () =>{
       try {
         const response = await getInvites();
-        setInvites(response.data);
-        console.log(`end of get invites, `, invites)
+        setInvites(response[0]);
+        console.log(`response to get invites, `)
       } catch (error){
         console.log(`failed to get invites, `, error)
       }
@@ -41,7 +29,8 @@ const MyInvites = () => {
   return (
     <div>
       
-      <Header text={profile ? `${profile.user.username}'s Invites` : 'My Invites'} />
+      <Header text={invites ? `${invites.invitee.user.username}'s Invites` : 'My Invites'} />
+      {/* map party invites */}
       <Image />
       
     </div>

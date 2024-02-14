@@ -4,7 +4,6 @@ import api from './apiConfig.js'
 export const getProfile = async () => {
     try {
       const response = await api.get("/profile/");
-      console.log("API response:", response);
       return response.data;
     } catch (error) {
       throw error;
