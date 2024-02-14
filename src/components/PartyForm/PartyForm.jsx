@@ -1,40 +1,97 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import SquareBlueButton from "../Buttons/SquareBlueButton";
 import PartyFormField from "../FormFields/PartyFormField";
 import PartyFormTextArea from "../FormFields/PartyFormTextArea";
-const PartyForm = (props) => {
-	const { handleClick } = props;
 
-  const [selectedStartDate, setSelectedStartDate] = useState(null);
-  const [selectedEndDate, setSelectedEndDate] = useState(null);
+const PartyForm = (props) => {
+	const { handleClick, isReadOnly, partyDetails } = props;
+
+  let [partyFormData, setPartyFormData] = useState({name: '',
+                                                    location: '',
+                                                    startDate: '',
+                                                    endDate: '',
+                                                    description: '',
+                                                    invite: ''});
+
+  useEffect(() => {
+    if (isReadOnly) {
+      setPartyFormData(partyDetails);
+    }
+  }, [isReadOnly, partyDetails]);
+
+  const updatePartyFormData = (field, newData) => {
+    setPartyFormData(
+      {
+        ...partyFormData,
+        [field]: newData,
+      }
+    );
+  };
 
 	return (
     <div className='m-2 p-2 bg-white'>
-      <h2>Party Name</h2>
+      { isReadOnly && <h2 className='m-2'>{partyDetails.name}</h2>}
 		  <form className='flex flex-col gap-4'>
-			  <PartyFormField labelName="location" placeholderText="Location"/>
+        { !isReadOnly &&
+          <PartyFormField
+            isReadOnly={isReadOnly}
+            labelName='name'
+            handleChange={updatePartyFormData}
+            fieldValue={partyFormData.name}
+            placeholderText='Party Name'
+          /> }
+			  <PartyFormField
+          isReadOnly={isReadOnly}
+          labelName="location"
+          handleChange={updatePartyFormData}
+          fieldValue={partyFormData.location}
+          placeholderText="Location"
+        />
         <div className='flex gap-5'>
           <DatePicker
+            readOnly={isReadOnly}
             placeholderText='Start Date'
-            selected={selectedStartDate}
-            onChange={date => setSelectedStartDate(date)}
+            selected={partyFormData.startDate}
+            onChange={date => updatePartyFormData('startDate', date)}
             className='focus:outline-none bg-light-grey placeholder-grey pl-2 py-2 w-full'
           />
           <DatePicker
             placeholderText='End Date'
-            selected={selectedEndDate}
-            onChange={date => setSelectedEndDate(date)}
+            selected={partyFormData.endDate}
+            onChange={date => updatePartyFormData('endDate', date)}
             className='focus:outline-none bg-light-grey placeholder-grey pl-2 py-2 w-full'
           />
     </div>
-        <PartyFormTextArea labelName='description' placeholderText="Info"/>
-        <PartyFormField labelName="invite" placeholderText="Invite Friends!"/>
-        <SquareBlueButton handleClick={handleClick} text="Submit"></SquareBlueButton>
+        <PartyFormTextArea
+          isReadOnly={isReadOnly}
+          labelName='description'
+          handleChange={updatePartyFormData}
+          fieldValue={partyFormData.description}
+          placeholderText="Info"
+        />
+        <PartyFormField
+          isReadOnly={isReadOnly}
+          labelName="invite"
+          handleChange={updatePartyFormData}
+          fieldValue={partyFormData.invite}
+          placeholderText="Invite Friends!"
+        />
+        {!isReadOnly && (
+          <SquareBlueButton
+            disabled={isReadOnly}
+            handleClick={handleClick} text="Submit">
+          </SquareBlueButton>
+        )}
 		  </form>
     </div>
 	);
+};
+
+PartyForm.defaultProps = {
+  isReadOnly: false,
+  partyDetails: {},
 };
 
 export default PartyForm;

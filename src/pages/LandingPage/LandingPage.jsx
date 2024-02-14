@@ -1,6 +1,6 @@
 import React from 'react';
-import Text from '../../components/LandingPageText/LandingPageText'
-import Button from '../../components/LandingPageButton/LandingPageButton'
+import Text from '../../components/LandingPageText/LandingPageText';
+import Button from '../../components/LandingPageButton/LandingPageButton';
 
 const styles = {
   ImageContainer: {
