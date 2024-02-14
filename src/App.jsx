@@ -20,6 +20,10 @@ function App() {
 
   const [user, setUser] = useState(null);
 
+  const updateUser = (update) => {
+    setUser(update);
+  };
+
   useEffect(() => {
     const fetchUser = async () => {
       const user = await verifyUser();
@@ -36,7 +40,7 @@ function App() {
         <Route path="/" element={<Image />}></Route>
         <Route path="/home" element={<Home />}></Route>
         <Route path="/user/login" element={<Login setUser={setUser}/>}></Route>
-        <Route path="/user/signup" element={<Signup setUser={setUser}/>}></Route>
+        <Route path="/user/signup" element={<Signup updateUser={updateUser} />}></Route>
 
         {/* add a ternary that controls if you can view these pages based on if you are a user or not */}
         <Route path="/messages" element={<Messages />}/>

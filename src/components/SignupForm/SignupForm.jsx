@@ -5,8 +5,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { signUp } from '../../services/users';
 
-const SignupForm = (props) => {
-    // const { setUser } = props;
+const SignupForm = (updateUser) => {
     const navigate = useNavigate();
 
     const [form, setForm] = useState({
@@ -30,8 +29,8 @@ const SignupForm = (props) => {
         console.log('submitted');
         try {
             const userData = await signUp(form);
-                return userData;
-            // setUser(userData);
+                // return userData;
+            updateUser(userData);
 
             navigate("/login");
         } catch (error) {

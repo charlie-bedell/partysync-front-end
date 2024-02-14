@@ -28,10 +28,10 @@ const LoginForm = (props) => {
 		console.log('submitted');
 	  try {
 		const userData = await signIn(form);
-			return userData;
+			userData;
 		// setUser(userData);
   
-		navigate("/login");
+		navigate("/user/profile");
 	  } catch (error) {
 		console.error(error);
 		setForm((prevForm) => ({
