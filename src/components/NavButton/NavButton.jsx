@@ -11,7 +11,7 @@ const NavButton = (props) => {
 
   const icons = {
     "Home": <HomeIcon className={tailwindIconStyles}/>,
-    "Messages": <ChatBubbleOvalLeftIcon className={tailwindIconStyles} />,
+    "My Invites": <ChatBubbleOvalLeftIcon className={tailwindIconStyles} />,
     "New": <PlusCircleIcon className={tailwindIconStyles} />,
     "Profile": <UserIcon className={tailwindIconStyles} />,
   };

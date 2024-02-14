@@ -3,7 +3,7 @@ import NavBar from './components/NavBar/NavBar.jsx';
 import Login from './pages/Login/Login.jsx';
 import Signup from './pages/Signup/Signup.jsx';
 import Home from './pages/Home/Home.jsx';
-import Messages from './pages/Messages/Messages.jsx';
+import MyInvites from './pages/MyInvites/MyInvites.jsx';
 import NewParty from './pages/NewParty/NewParty.jsx';
 import Profile from './pages/Profile/Profile.jsx';
 import Image from './pages/LandingPage/LandingPage.jsx';
@@ -41,9 +41,7 @@ function App() {
         <Route path="/home" element={<Home />}></Route>
         <Route path="/user/login" element={<Login setUser={setUser}/>}></Route>
         <Route path="/user/signup" element={<Signup updateUser={updateUser} />}></Route>
-
-        {/* add a ternary that controls if you can view these pages based on if you are a user or not */}
-        <Route path="/messages" element={<Messages />}/>
+        <Route path="/myinvites" element={<MyInvites />}/>
         <Route path="/newparty" element={<NewParty />}/>
         <Route path="/user/profile" element={<Profile />}/>
       </Routes>

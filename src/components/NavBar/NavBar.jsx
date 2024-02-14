@@ -9,8 +9,8 @@ const NavBar = (props) => {
         <Link to="/home">
           <NavButton text="Home"/>
         </Link>
-        <Link to="/messages">
-          <NavButton text="Messages"/>
+        <Link to="/myinvites">
+          <NavButton text="My Invites"/>
         </Link>
         <Link to="/newparty">
           <NavButton text="New"/>
