@@ -26,13 +26,14 @@ const SignupForm = (updateUser) => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        console.log(updateUser)
         console.log('submitted');
         try {
             const userData = await signUp(form);
                 // return userData;
-            updateUser(userData);
+            // updateUser(userData);
 
-            navigate("/login");
+            navigate("/user/login");
         } catch (error) {
             console.error(error);
             setForm((prevForm) => ({

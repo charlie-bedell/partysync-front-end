@@ -28,7 +28,7 @@ const LoginForm = (props) => {
 		console.log('submitted');
 	  try {
 		const userData = await signIn(form);
-			userData;
+			// userData;
 		// setUser(userData);
   
 		navigate("/user/profile");
