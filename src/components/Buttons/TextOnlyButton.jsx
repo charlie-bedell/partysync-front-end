@@ -2,10 +2,10 @@
 
 const TextOnlyButton = (props) => {
 	
-	const { handleClick, text } = props;
+	const { text } = props;
 
 	return (
-		<button className='m-2' onClick={handleClick}>
+		<button className='m-2' type="submit">
 			{text}
 		</button>
 	);
