@@ -8,6 +8,11 @@
   }
   
   .purple-nav-button:hover {
-    background-color: #092ecc; /* Slightly darker on hover */
+			background-color: #092ecc; /* Slightly darker on hover */
+  }
+
+@media (max-width: 811px) {
+  .purple-nav-button {
+    background-color: #092ecc; /* Change background color for phone view */
   }
   

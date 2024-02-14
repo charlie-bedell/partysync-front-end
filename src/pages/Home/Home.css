@@ -1,0 +1,15 @@
+.background-image {
+		background-image: 'https://media3.giphy.com/media/3o6Yg2fNFfEryQ7VPW/giphy.webp?cid=acd21440i3y38wd58ow2atqaww2ml3dspljosi9sqj65rvkd&ep=v1_gifs_search&rid=giphy.webp&ct=g';
+		width: 100vw;
+		height: 100vh;
+		border-radius: 0;
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		zIndex: -100;
+		/* background-attachment: fixed; */
+		
+		
+											
+					 
+}

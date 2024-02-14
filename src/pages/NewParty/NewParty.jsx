@@ -9,8 +9,6 @@ const NewParty = (props) => {
 
 	return (
 		<div>
-		<Header text='New Party' />
-		<Image />
 			<PartyForm />
 		</div>
 	);

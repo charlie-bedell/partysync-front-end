@@ -8,8 +8,6 @@ const Messages = (props) => {
 
 	return (
 		<div>
-			<Header text='Messages' />
-			<Image />
 		</div>
 	);
 };

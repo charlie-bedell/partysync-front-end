@@ -1,6 +1,6 @@
 // import './Profile.css';
-import Header from '../../components/Header/Header'
-import Image from '../../components/HomeImage/HomeImage'
+import Header from '../../components/Header/Header';
+import Image from '../../components/HomeImage/HomeImage';
 
 
 const Profile = (props) => {
@@ -9,8 +9,6 @@ const Profile = (props) => {
 
 	return (
 		<div>
-			<Header text='Profile' />
-			<Image />
 		</div>
 	);
 };
