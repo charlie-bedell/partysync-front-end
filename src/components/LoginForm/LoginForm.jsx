@@ -37,7 +37,9 @@ const LoginForm = ({updateUser}) => {
 		  username: prevForm.username,
 		  password: prevForm.password,
 		}));
-	  }
+		setTimeout(() => {
+			setMessage(null);
+			}, 3000);}
 	};
 
 	return (
