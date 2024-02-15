@@ -3,39 +3,45 @@ import Header from '../../components/Header/Header'
 import Image  from '../../components/HomeImage/HomeImage'
 import PartyForm from '../../components/PartyForm/PartyForm'
 import api from '../../services/apiConfig'
-
+import RespondToInvite from '../../components/RespondToInvite/RespondToInvite'
 import { getInvites } from '../../services/invites'
 import { useState, useEffect } from 'react'
 
 
 
 const MyInvites = () => {
-  const [invites, setInvites] = useState(null);
+  const [invites, setInvites] = useState([]);
 
   useEffect(()=>{
     const fetchInvites= async () =>{
       try {
         const response = await getInvites();
-        setInvites(response[0]);
-        console.log(`response to get invites, `, invites.party)
+        setInvites(response);
+        console.log(`invites`, invites)
       } catch (error){
         console.log(`failed to get invites, `, error)
       }
     }
     fetchInvites();
+    
   }, [])
+
+
 
   return (
     <div>
-      
-      <Header text={invites ? `${invites.invitee.user.username}'s Invites` : 'My Invites'} />
+      <Header text= 'My Invites' />
+      {/* <Header text={invites ? `${invites[0].invitee.user.username}'s Invites` : 'My Invites'} /> */}
 
-      {/* {invites.map((invite) =>
-          <PartyForm key={party.id} isReadOnly={true} partyDetails={invite.party} read/>
-      )} */}
+      {invites.length > 0 ? (
+        invites.map((invite) =>
+          <PartyForm key={invite.id} isReadOnly={true} partyDetails={invite.party} isInvite={true} inviteId={invite.id}/>
+        )
+      ) : (
+        <p>No invites found.</p> 
+      )}
       
-
-      {/* <RespondToInvite /> */}
+      
       <Image />
       
     </div>
