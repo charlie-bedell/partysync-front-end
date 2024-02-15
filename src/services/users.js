@@ -1,10 +1,8 @@
 import api from "./apiConfig";
 
-const baseURL = 'https://partysync-5fbbda6a7756.herokuapp.com';
-
 export const signUp = async (credentials) => {
   try {
-    const resp = await api.post(`${baseURL}/users/register/`, credentials);
+    const resp = await api.post('/users/register/', credentials);
     localStorage.setItem("token", resp.data.access);
     return resp.data.user;
   } catch (error) {
@@ -14,7 +12,7 @@ export const signUp = async (credentials) => {
 
 export const signIn = async (credentials) => {
   try {
-    const resp = await api.post(`${baseURL}/users/login/`, credentials);
+    const resp = await api.post('/users/login/', credentials);
     localStorage.setItem("token", resp.data.access);
     return resp.data.user;
   } catch (error) {
@@ -34,7 +32,7 @@ export const signOut = async () => {
 export const verifyUser = async () => {
   const token = localStorage.getItem("token");
   if (token) {
-    const resp = await api.get(`${baseURL}/users/token/refresh/`);
+    const resp = await api.get('/users/token/refresh/');
     localStorage.setItem("token", resp.data.access);
     return resp.data.user;
   }
