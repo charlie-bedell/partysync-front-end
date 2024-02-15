@@ -1,11 +1,13 @@
 
 import Header from '../../components/Header/Header'
 import Image  from '../../components/HomeImage/HomeImage'
+import PartyForm from '../../components/PartyForm/PartyForm'
 import api from '../../services/apiConfig';
 import { getProfile } from '../../services/profile';
 import { getInvites } from '../../services/invites';
 import { useState, useEffect } from 'react';
 import RespondToInvite from '../../components/RespondToInvite/RespondToInvite';
+
 
 const MyInvites = () => {
   const [invites, setInvites] = useState(null);
@@ -32,6 +34,7 @@ const MyInvites = () => {
       
       <Header text={invites ? `${invites.invitee.user.username}'s Invites` : 'My Invites'} />
       {/* map party invites */}
+      
       <RespondToInvite />
       <Image />
       
