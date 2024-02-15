@@ -13,25 +13,29 @@ const styles = {
     left: 0,
   },
   button: {
+    position: 'fixed',
     cursor: 'pointer',
-    width: '334px',
+    width: '120px',
     height: '49px',
     padding: '0px 8px',
-    border: '0',
     boxSizing: 'border-box',
-    borderRadius: '8px',
+    borderRadius: '11px',
     boxShadow: '0px 0px 10px rgba(0,0,0,0.1)',
     backgroundColor: '#000000',
     color: '#ffffff',
     fontSize: '19px',
-    fontFamily: 'Roboto',
+    fontFamily: "Fredoka sans-serif",
     lineHeight: '24px',
     outline: 'none',
+    border: '1px solid white',
+    marginLeft: '-200px',
+    marginTop: '-582px',
+    letterSpacing: '0.5px'
   },
 };
 
 const defaultProps = {
-  label: 'Roll Out',
+  label: 'Roll Out ',
 };
 
 const Button = (props) => {
@@ -51,3 +55,5 @@ const handleClick = () => {
 };
 
 export default Button;
+
+

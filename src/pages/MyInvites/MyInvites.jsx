@@ -8,7 +8,6 @@ import { getInvites } from '../../services/invites'
 import { useState, useEffect } from 'react'
 
 
-
 const MyInvites = () => {
   const [invites, setInvites] = useState([]);
 
@@ -48,4 +47,4 @@ const MyInvites = () => {
   );
 };
 
-export default MyInvites
+export default MyInvites;
