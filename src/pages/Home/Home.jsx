@@ -60,8 +60,8 @@ const Home = (props) => {
 	return (
 		<div>
 			<PurpleNavBar handleChange={changePartyFilter}/>
-      {allMyParties?.map((party) => {
-        return <PartyDetail partyDetails={party.party}/>;
+      {allMyParties?.map((party, idx) => {
+        return <PartyDetail key = {idx} partyDetails={party.party}/>;
       })}
 			<Image />
 		</div>
