@@ -43,29 +43,39 @@ const LoginForm = ({updateUser}) => {
 	};
 
 	return (
-		<form onSubmit={handleSubmit} >
-			<div className='flex flex-col items-end justify-center gap-4'>
-				<LoginFormField
-					labelText="Username"
-					TWFieldWidth='w-4/6'
-					name="username"
-					value={form.username}
-					handleChange={handleChange}
-				/>
-				<LoginFormField
-					labelText="Password"
-					TWFieldWidth='w-3/6'
-					name="password"
-					value={form.password}
-					handleChange={handleChange}
-				/>
+        <form onSubmit={handleSubmit} 
+			Style={'margin-top:360px'}
+		>
+            <div className="flex flex-col items-end justify-center gap-4 mt-[361px]">
+                <LoginFormField
+                    labelText="Username"
+                    TWFieldWidth='w-4/6'
+                    name="username"
+                    value={form.username}
+                    handleChange={handleChange}
+                />
+                <LoginFormField
+                    labelText="Password"
+                    TWFieldWidth='w-3/6'
+                    name="password"
+                    value={form.password}
+                    handleChange={handleChange}
+                />
 
-				{message && <p>{message}</p>}
+                {message && <p>{message}</p>}
 
-				<TextOnlyButton type='submit' text="Login" />
-			</div>
-		</form>
-	);
-};
+                <button className='bg-blue text-white h-12 mx-2 transition duration-150 ease-in-out rounded-lg hover:rounded-full active:border-black undefined' type='submit'>
+                    Login
+                </button>
+
+                <p className='text-blue cursor-pointer' onClick={() => navigate("/user/signup")}
+				Style={'margin-right:30px'}
+				>
+                    Sign Up
+                </p>
+            </div>
+        </form>
+    );
+};;
 
 export default LoginForm;
