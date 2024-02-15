@@ -1,4 +1,4 @@
-import api from './apiConfig.js'
+import api from './apiConfig.js';
 
 export const getInvites = async () => {
     try {
@@ -20,7 +20,8 @@ export const getInvites = async () => {
   
   export const inviteStatus = async (id,inviteData) => {
     try {
-      const response = await api.post(`/profile/invite/${id}/response/`, inviteData);
+      const response = await api.patch(`/profile/invite/${id}/response/`, inviteData);
+      console.log(`user responded to invite`, inviteData)
       return response.data;
     } catch (error) {
       throw error;

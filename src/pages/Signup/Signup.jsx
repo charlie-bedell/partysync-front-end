@@ -4,13 +4,13 @@ import SignupForm from '../../components/SignupForm/SignupForm';
 import Image from '../../components/SignupImage/SignupImage';
 
 
-const Signup = (props) => {
+const Signup = ({updateUser}) => {
 
 	return (
 		<div>
 			<Header text="Sign up" />
 			<Image />
-			<SignupForm />
+			<SignupForm updateUser={updateUser}/>
 		</div>
 	);
 };
