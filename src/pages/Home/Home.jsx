@@ -12,23 +12,22 @@ const Home = (props) => {
 	
 	// const {  } = props;
 
-  const [partyFilter, setPartyFilter] = useState('attended');
+  const [partyFilter, setPartyFilter] = useState('upcoming');
   const [allMyParties, setAllMyParties] = useState(null);
   const [userId, setUserId] = useState(null);
 
   const filterConditions = {
     'upcoming': (party) => {
-      
       let today = new Date();
       today.setHours(23, 59, 0, 0);
       return (today < new Date(party.party.start_time) && (party.party.host.id !== userId));
     },
     'attended': (party) => {
       let today = new Date();
-      return ((today > (party.party.end_time ? new Date(party.party.end_time) : new Date(party.party.start_time)) && (party.party.host.id !== userId)));
+      return (today > (party.party.end_time ? new Date(party.party.end_time) : new Date(party.party.start_time)));
     },
     'hosting': (party) => { 
-      return userId == party.party.host.id;
+      return ((userId == party.party.host.id) && !filterConditions.attended(party));
     },
   };
 
