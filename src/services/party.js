@@ -1,13 +1,23 @@
 import api from './apiConfig.js'
 
 export const getParties = async () => {
-    try {
+  try {
+    // get not used
       const response = await api.get("/party/");
       return response.data;
     } catch (error) {
       throw error;
     }
-  };
+};
+
+export const getHostedParties = async () => {
+  try {
+    const response = await api.get(`/profile/hosted-parties/`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
   
   export const getParty = async (id) => {
     try {
