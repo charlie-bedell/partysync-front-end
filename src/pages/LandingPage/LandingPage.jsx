@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '../../components/LandingPageButton/LandingPageButton';
 import videoFile from '../../assets/production_id_4306405 (2160p).mp4';
 import Logo from '../../assets/PartySYNC_Final.png';
+import './LandingPage.css'
 
 const styles = {
   videoContainer: {
@@ -23,10 +24,10 @@ const styles = {
   },
   Logo: {
     position: 'fixed',
-    top: '0',
-    left: '39%', // Center the image horizontally
+    top: '3.4vh',
+    left: '37%', // Center the image horizontally
     transform: 'translateX(-50%)', // Center-align the image
-    width: 'auto', // Maintain original image width or set as needed
+    width: '43vh', // Maintain original image width or set as needed
     height: 'auto', // Adjust height as needed
     zIndex: '1', // Ensure the image is above the background video
   },
