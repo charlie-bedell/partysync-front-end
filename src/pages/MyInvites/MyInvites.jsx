@@ -8,19 +8,6 @@ import { getInvites } from '../../services/invites'
 import { useState, useEffect } from 'react'
 
 
-  useEffect(() => {
-    
-    const fetchProfile = async () => {
-      try {
-        const response = await getProfile(); 
-        setProfile(response.data); 
-        console.log('end of grab profile,', profile)
-      } catch (error) {
-        console.error("Failed to fetch profile:", error);
-      }
-    };
-
-
 const MyInvites = () => {
   const [invites, setInvites] = useState([]);
 
@@ -60,4 +47,4 @@ const MyInvites = () => {
   );
 };
 
-export default MyInvites
+export default MyInvites;
