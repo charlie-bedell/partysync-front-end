@@ -1,18 +1,26 @@
 import { Link } from 'react-router-dom';
-import './NavBar.css';
+import NavButton from '../NavButton/NavButton';
+import './NavBar.css'
 
 const NavBar = (props) => {
-	
-	// const {  } = props;
 
 	return (
-		<header>
-			<nav>
-        <Link to="/home">Home</Link>
-        <Link to="/user/login">Login</Link>
-        <Link to="/user/signup">Signup</Link>
+		<footer className='bg-black'>
+      <nav className="flex center justify-around py-2 navBarText">
+        <Link to="/home">
+          <NavButton text="Home"/>
+        </Link>
+        <Link to="/myinvites">
+          <NavButton text="My Invites"/>
+        </Link>
+        <Link to="/newparty">
+          <NavButton text="New"/>
+        </Link>
+        <Link to="/user/profile">
+          <NavButton text="Profile"/>
+        </Link>
       </nav>
-		</header>
+		</footer>
 	);
 };
 
