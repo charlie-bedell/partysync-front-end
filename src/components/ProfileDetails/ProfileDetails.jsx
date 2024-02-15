@@ -6,10 +6,12 @@ const ProfileDetails = ({ profile }) => {
 
     return (
         <div className="profile-details">
-            <h2>Username: {profile.username} </h2>
+            <h2>{profile.first_name} {profile.last_name} </h2>
+            <hr style={{ width: '45%', borderColor: 'orange', borderWidth: '1px', marginBottom: '11px' }} />
+            <p>Username: {profile.username} </p>
             <p>Email: {profile.email} </p>
-            <p>First Name: {profile.first_name} </p>
-            <p>Last Name: {profile.last_name} </p>
+           
+           
         </div>
     );
 };

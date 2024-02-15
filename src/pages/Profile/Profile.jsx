@@ -24,7 +24,7 @@ const Profile = (props) => {
 	
 
 	return (
-		<div>
+		<div className="centered-container">
 			<Image />
 			<ProfileDetails profile={profileDetails} />
 			

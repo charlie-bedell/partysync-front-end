@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+
+.header {
+  top: -4px;
+  left: 0;
+  width: 100vw;
+  height: 123px;
+  background-color: #030303;
+  color: #ffffff;
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  align-items: flex-end; /* Align content to the bottom */
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0 0 22px 35px; /* Add bottom and left padding to position the text */
+  -webkit-font-smoothing: antialiased;
+  font-size: 21px;
+  letter-spacing: 0.5px;
+}
