@@ -16,7 +16,7 @@ const MyInvites = () => {
       try {
         const response = await getProfile(); 
         setProfile(response.data); 
-				console.log('end of grab profile,', profile)
+        console.log('end of grab profile,', profile)
       } catch (error) {
         console.error("Failed to fetch profile:", error);
       }
