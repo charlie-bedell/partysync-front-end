@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
 import NavButton from '../NavButton/NavButton';
+import './NavBar.css'
 
 const NavBar = (props) => {
 
 	return (
 		<footer className='bg-black'>
-      <nav className="flex center justify-around py-2">
+      <nav className="flex center justify-around py-2 navBarText">
         <Link to="/home">
           <NavButton text="Home"/>
         </Link>
