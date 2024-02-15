@@ -1,15 +1,15 @@
-import React,{ useState } from "react"
+import React, { useState } from "react";
 import InviteButton from "../Buttons/InviteButton";
 import { inviteStatus } from "../../services/invites";
 
+const RespondToInvite = ({ invite_id }) => {
+  const [selectedResponse, setSelectedResponse] = useState('');
 
-const RespondToInvite = (props) => {
-  const { invite_id } = props
-  
   const handleChange = (response) => {
     console.log(`User responded with: ${response}`);
-    inviteStatus(invite_id, response)
-  }
+    setSelectedResponse(response); 
+    inviteStatus(invite_id, response);
+  };
 
   const responses = ['Yes', 'No', 'Maybe'];
 
@@ -22,10 +22,13 @@ const RespondToInvite = (props) => {
             key={response}
             handleClick={(e) => {
               e.preventDefault();
-              handleChange(response);
+              if (!selectedResponse) { 
+                handleChange(response);
+              }
             }}
             text={response}
-            additionalClasses="px-5"
+            additionalClasses={`px-5 ${selectedResponse === response ? 'border-black' : ''}`} // Add border-black class if this button was clicked
+            disabled={selectedResponse !== '' && selectedResponse !== response} // Disable other buttons
           />
         ))}
       </div>
