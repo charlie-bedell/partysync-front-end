@@ -17,6 +17,15 @@ export const getParties = async () => {
       throw error;
     }
   };
+
+  export const getHostedParty = async () => {
+    try {
+      const response = await api.get(`/profile/hosted-parties/`);
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  };
   
   export const createParty = async (partyData) => {
     try {
