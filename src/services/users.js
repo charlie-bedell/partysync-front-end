@@ -1,7 +1,5 @@
 import api from "./apiConfig";
 
-const baseURL = 'https://partysync-5fbbda6a7756.herokuapp.com';
-
 export const signUp = async (credentials) => {
   try {
     const resp = await api.post('/users/register/', credentials);

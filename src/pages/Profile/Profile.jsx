@@ -11,7 +11,7 @@ const Profile = (props) => {
 		const fetchProfiledata = async () => {
 			try {
 				const profiledata = await getProfile(); 
-				console.log(profiledata); 
+				console.log(profiledata.user); 
 				setProfileDetails(profiledata.user); 
 			} catch (error) {
 				console.error('Error fetching profile data:', error);
@@ -27,7 +27,6 @@ const Profile = (props) => {
 		<div className="centered-container">
 			<Image />
 			<ProfileDetails profile={profileDetails} />
-			
 		</div>
 	);
 };
