@@ -1,4 +1,4 @@
-import api from './apiConfig.js'
+import api from './apiConfig.js';
 
 export const getInvites = async () => {
     try {
