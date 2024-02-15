@@ -3,7 +3,6 @@ import PartyForm from "../PartyForm/PartyForm";
 const PartyDetail = (props) => {
 
 	const { partyDetails } = props;
-  console.log(partyDetails.start_time); // not display date and time??
   const partyInformation = {
     name: partyDetails.party_name,
     location: partyDetails.location,
