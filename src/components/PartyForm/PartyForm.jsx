@@ -12,7 +12,7 @@ const PartyForm = (props) => {
 
 	return (
     <div className='m-2 p-2 bg-white'>
-      <h2 className='m-2 font-bold'>{partyDetails.name}</h2>
+      {isReadOnly && <h2 className='m-2 font-bold'>{partyDetails.name}</h2>}
 		  <form className='flex flex-col gap-4'>
         { !isReadOnly &&
           <PartyFormField
