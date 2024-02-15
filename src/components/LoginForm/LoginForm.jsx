@@ -6,8 +6,9 @@ import { useNavigate } from 'react-router-dom';
 import { signIn } from '../../services/users';
 
 
-const LoginForm = (props) => {
+const LoginForm = ({updateUser}) => {
 	const navigate = useNavigate();
+	const [message, setMessage] = useState(null);
 	const [form, setForm] = useState({
         username: "",
 		password: "",
@@ -15,7 +16,6 @@ const LoginForm = (props) => {
   
 	const handleChange = (e) => {
         const { name, value } = e.target;
-        console.log("handleChange triggered", name, value); // Added log
         setForm((prevForm) => ({
             ...prevForm,
             [name]: value,
@@ -28,17 +28,18 @@ const LoginForm = (props) => {
 		console.log('submitted');
 	  try {
 		const userData = await signIn(form);
-			userData;
-		// setUser(userData);
-  
+		updateUser(userData);
 		navigate("/user/profile");
 	  } catch (error) {
 		console.error(error);
+		setMessage(error.response.data.error);
 		setForm((prevForm) => ({
 		  username: prevForm.username,
 		  password: prevForm.password,
 		}));
-	  }
+		setTimeout(() => {
+			setMessage(null);
+			}, 3000);}
 	};
 
 	return (
@@ -58,6 +59,9 @@ const LoginForm = (props) => {
 					value={form.password}
 					handleChange={handleChange}
 				/>
+
+				{message && <p>{message}</p>}
+
 				<TextOnlyButton type='submit' text="Login" />
 			</div>
 		</form>
