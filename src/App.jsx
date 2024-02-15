@@ -50,7 +50,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Image />}/>
           <Route path="/home" element={<Home />}/>
-          <Route path="/user/login" element={<Login setUser={setUser}/>}/>
+          <Route path="/user/login" element={<Login updateUser={updateUser}/>}/>
           <Route path="/user/signup" element={<Signup updateUser={updateUser} />}/>
           <Route path="/myinvites" element={<MyInvites />}/>
           <Route path="/newparty" element={<NewParty />}/>

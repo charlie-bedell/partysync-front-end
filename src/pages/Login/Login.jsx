@@ -5,15 +5,12 @@ import SquareBlueButton  from '../../components/Buttons/SquareBlueButton';
 import { Link } from 'react-router-dom';
 
 
-const Login = (props) => {
-	
-	// const {  } = props;
-
+const Login = ({updateUser}) => {
 	return (
 		<div>
 		  <Image />
 		  <Text />
-      <LoginForm />
+		<LoginForm updateUser={updateUser} />
 	  <Link to="/user/signup">
 	  <SquareBlueButton text="Sign Up" />
 	  </Link>

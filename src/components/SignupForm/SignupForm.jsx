@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { signUp } from '../../services/users';
 
-const SignupForm = (updateUser) => {
+const SignupForm = ({updateUser}) => {
     const navigate = useNavigate();
 
     const [form, setForm] = useState({
@@ -29,10 +29,8 @@ const SignupForm = (updateUser) => {
         console.log('submitted');
         try {
             const userData = await signUp(form);
-                // return userData;
             updateUser(userData);
-
-            navigate("/login");
+            navigate("/user/login");
         } catch (error) {
             console.error(error);
             setForm((prevForm) => ({
