@@ -3,25 +3,21 @@ import Header from '../../components/Header/Header'
 import Image  from '../../components/HomeImage/HomeImage'
 import PartyForm from '../../components/PartyForm/PartyForm'
 import api from '../../services/apiConfig'
-import { getProfile } from '../../services/profile'
+
 import { getInvites } from '../../services/invites'
 import { useState, useEffect } from 'react'
-import RespondToInvite from '../../components/RespondToInvite/RespondToInvite'
+
 
 
 const MyInvites = () => {
   const [invites, setInvites] = useState(null);
-
-  // handle button click  (function that triggers post)
-  // add is invitation on party form
-  // make yes no maybe radial button Component then tell charlie about it
 
   useEffect(()=>{
     const fetchInvites= async () =>{
       try {
         const response = await getInvites();
         setInvites(response[0]);
-        console.log(`response to get invites, `)
+        console.log(`response to get invites, `, invites.party)
       } catch (error){
         console.log(`failed to get invites, `, error)
       }
@@ -33,9 +29,13 @@ const MyInvites = () => {
     <div>
       
       <Header text={invites ? `${invites.invitee.user.username}'s Invites` : 'My Invites'} />
+
+      {/* {invites.map((invite) =>
+          <PartyForm key={party.id} isReadOnly={true} partyDetails={invite.party} read/>
+      )} */}
       
 
-      <RespondToInvite />
+      {/* <RespondToInvite /> */}
       <Image />
       
     </div>
