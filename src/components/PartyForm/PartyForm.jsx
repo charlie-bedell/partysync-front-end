@@ -4,9 +4,10 @@ import "react-datepicker/dist/react-datepicker.css";
 import SquareBlueButton from "../Buttons/SquareBlueButton";
 import PartyFormField from "../FormFields/PartyFormField";
 import PartyFormTextArea from "../FormFields/PartyFormTextArea";
+import RespondToInvite from "../RespondToInvite/RespondToInvite";
 
 const PartyForm = (props) => {
-	const { handleClick, isReadOnly, partyDetails, updatePartyFormData } = props;
+	const { handleClick, isReadOnly, partyDetails, updatePartyFormData, isInvite, inviteId} = props;
 
   const hasEndDate = ((!isReadOnly) || (isReadOnly && partyDetails.endDate));
 
@@ -65,7 +66,9 @@ const PartyForm = (props) => {
               
             }} text="Send Out Invites">
           </SquareBlueButton>
+          
         )}
+        {isInvite && <RespondToInvite invite_id={inviteId}/> }
 		  </form>
     </div>
 	);
