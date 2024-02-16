@@ -35,7 +35,8 @@ const MyInvites = () => {
 
   return (
     <div>
-      <Header text={invites ? `${invites[0].invitee.user.username}'s Invites` : 'My Invites'} />
+      {/* <Header text={invites ? `${invites[0].invitee.user.username}'s Invites` : 'My Invites'} /> */}
+      <Header text={invites[0]?.invitee.user.username ? `${invites[0].invitee.user.username}'s Invites` : 'My Invites'} />
       {invites.length > 0 ? (
         invites.map((invite) =>
           <PartyForm key={invite.id} isReadOnly={true} partyDetails={invite.party} isInvite={true} inviteId={invite.id}/>
