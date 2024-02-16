@@ -1,8 +1,6 @@
 import Header from '../../components/Header/Header'
 import Image  from '../../components/HomeImage/HomeImage'
 import PartyForm from '../../components/PartyForm/PartyForm'
-import api from '../../services/apiConfig'
-import RespondToInvite from '../../components/RespondToInvite/RespondToInvite'
 import { getInvites } from '../../services/invites'
 import { useState, useEffect } from 'react'
 
@@ -48,6 +46,6 @@ const MyInvites = () => {
       <Image />
     </div>
   );
-};
+}
 
 export default MyInvites;
