@@ -27,6 +27,18 @@ export const getInvites = async () => {
       throw error;
     }
   };
+
+  export const deleteInvite = async (id) => {
+    try {
+      const response = await api.delete(`/invite/${id}/delete/`);
+      console.log(`user deleted the invite`)
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  };
+
+
   
 //   export const updateParty = async (id, partyData) => {
 //     try {

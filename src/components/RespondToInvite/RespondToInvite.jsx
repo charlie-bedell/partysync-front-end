@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import InviteButton from "../Buttons/InviteButton";
-import { inviteStatus } from "../../services/invites";
+import { inviteStatus, deleteInvite } from "../../services/invites";
 
 const RespondToInvite = ({ invite_id }) => {
   const [selectedResponse, setSelectedResponse] = useState('');
@@ -10,6 +10,10 @@ const RespondToInvite = ({ invite_id }) => {
     setSelectedResponse(response); 
     inviteStatus(invite_id, response);
   };
+
+  const handleClick = (invite_id) =>{
+    deleteInvite(invite_id)
+  }
 
   const responses = ['Yes', 'No', 'Maybe'];
 
@@ -30,7 +34,11 @@ const RespondToInvite = ({ invite_id }) => {
             additionalClasses={`px-5 ${selectedResponse === response ? 'border-black' : ''}`} // Add border-black class if this button was clicked
             disabled={selectedResponse !== '' && selectedResponse !== response} // Disable other buttons
           />
+          
         ))}
+        <a href="#" onClick={handleDelete} className="mt-4 text-blue-600 hover:text-blue-800 visited:text-purple-600">
+      Remove Invite
+    </a>
       </div>
     </div>
   );
