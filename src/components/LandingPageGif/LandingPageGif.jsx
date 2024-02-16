@@ -1,9 +1,10 @@
 import React from 'react';
 import myGif from '../../assets/production_id_43064052160p-ezgif.com-video-to-gif-converter.gif';
+import './LandingPageGif.css'
 
 const styles = {
     ImageContainer: {
-      position: 'absolute', // Ensure it's positioned absolutely relative to its nearest positioned ancestor or the body
+      position: 'fixed', // Ensure it's positioned absolutely relative to its nearest positioned ancestor or the body
       top: '0',
       left: '0',
       width: '100vw', // 100% of the viewport's width
@@ -35,7 +36,8 @@ const VinylGif = (props) => {
 
     // </>
     
-    <div style={{
+    <div className="vinylGifContainer"
+     style={{
       ...styles.ImageContainer,
       backgroundImage : `url(${image})`
 

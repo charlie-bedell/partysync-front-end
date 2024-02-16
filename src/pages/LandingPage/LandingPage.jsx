@@ -40,9 +40,11 @@ const styles = {
 const Image = (props) => {
   return (
     <>
-     <img src={Logo} alt="Logo" style={styles.Logo} />
-    <Button />
-    <VinylGif />
+    <div Style={'position:fixed'}>
+      <img src={Logo} alt="Logo" style={styles.Logo} />
+      <Button />
+      <VinylGif />
+    </div>
     {/* <div style={styles.videoContainer}>
     <video
   src={props.video}
