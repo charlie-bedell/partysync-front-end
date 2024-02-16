@@ -42,14 +42,15 @@ const Image = (props) => {
      <img src={Logo} alt="Logo" style={styles.Logo} />
     <Button />
     <div style={styles.videoContainer}>
-      <video
-        src={props.video}
-        autoPlay
-        muted // Necessary for autoPlay in most browsers
-        loop
-        controls
-        style={styles.video}
-      />
+    <video
+  src={props.video}
+  autoPlay
+  muted
+  loop
+  playsinline
+  controls
+  style={styles.video}
+/>
     </div>
     </>
   );
