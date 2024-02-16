@@ -6,6 +6,7 @@ import Home from './pages/Home/Home.jsx';
 import MyInvites from './pages/MyInvites/MyInvites.jsx';
 import NewParty from './pages/NewParty/NewParty.jsx';
 import Profile from './pages/Profile/Profile.jsx';
+// import VinylGif from './components/LandingPageGif/LandingPageGif.jsx';
 import Image from './pages/LandingPage/LandingPage.jsx';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header/Header.jsx';
@@ -49,6 +50,8 @@ function App() {
       <main className='flex-1 overflow-y-auto'>
         <Routes>
           <Route path="/" element={<Image />}/>
+
+          {/* <Route path="/" element={<VinylGif />}/> */}
           <Route path="/home" element={<Home />}/>
           <Route path="/user/login" element={<Login updateUser={updateUser}/>}/>
           <Route path="/user/signup" element={<Signup updateUser={updateUser} />}/>

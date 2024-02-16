@@ -29,7 +29,7 @@ const styles = {
     outline: 'none',
     border: '1px solid white',
     marginLeft: '-235px',
-    marginTop: '-569px',
+    marginTop: '-469px',
     letterSpacing: '0.5px'
   },
 };
