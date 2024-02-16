@@ -6,6 +6,7 @@ import PartyDetail from '../../components/PartyDetail/PartyDetail';
 import { getHostedParties, getParties, getParty } from '../../services/party';
 import { getInvites } from '../../services/invites';
 import { getProfile } from '../../services/profile';
+import HorizontalDivider from '../../components/HorizontalDivider/HorizontalDivider';
 
 
 const Home = (props) => {
@@ -60,6 +61,7 @@ const Home = (props) => {
 	return (
 		<div>
 			<PurpleNavBar handleChange={changePartyFilter}/>
+      <HorizontalDivider />
       {allMyParties?.map((party, idx) => {
         return <PartyDetail key = {idx} partyDetails={party.party}/>;
       })}
