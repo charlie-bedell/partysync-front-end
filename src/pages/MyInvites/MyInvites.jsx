@@ -15,17 +15,17 @@ const MyInvites = () => {
     const fetchInvites= async () =>{
       try {
         const response = await getInvites();
+        response.sort((a,b) => new Date(a.party.start_time) - new Date(b.party.start_time));
+        console.log(response);
         setInvites(response);
-        console.log(`invites`, invites)
+        console.log(`invites`, invites);
       } catch (error){
-        console.log(`failed to get invites, `, error)
+        console.log(`failed to get invites, `, error);
       }
     }
     fetchInvites();
     
   }, [])
-
-
 
   return (
     <div>
