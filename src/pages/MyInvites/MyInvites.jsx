@@ -1,4 +1,3 @@
-
 import Header from '../../components/Header/Header'
 import Image  from '../../components/HomeImage/HomeImage'
 import PartyForm from '../../components/PartyForm/PartyForm'
@@ -34,14 +33,11 @@ const MyInvites = () => {
       }
     }
     fetchInvites();
-    
   }, [])
 
   return (
     <div>
-      <Header text= 'My Invites' />
-      {/* <Header text={invites ? `${invites[0].invitee.user.username}'s Invites` : 'My Invites'} /> */}
-
+      <Header text={invites ? `${invites[0].invitee.user.username}'s Invites` : 'My Invites'} />
       {invites.length > 0 ? (
         invites.map((invite) =>
           <PartyForm key={invite.id} isReadOnly={true} partyDetails={invite.party} isInvite={true} inviteId={invite.id}/>
@@ -49,10 +45,7 @@ const MyInvites = () => {
       ) : (
         <p>No invites found.</p> 
       )}
-      
-      
       <Image />
-      
     </div>
   );
 };

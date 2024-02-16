@@ -45,7 +45,7 @@ function App() {
 
   return (
     <div className='flex flex-col h-full'>
-      {showNavBar && <header><Header text={locToName[location.pathname]}/></header>}
+      {showNavBar && location.pathname!=='/myinvites' && <header><Header text={locToName[location.pathname]}/></header>}
       <main className='flex-1 overflow-y-auto'>
         <Routes>
           <Route path="/" element={<Image />}/>
