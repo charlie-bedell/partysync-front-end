@@ -1,27 +1,28 @@
 import React from 'react';
 import Button from '../../components/LandingPageButton/LandingPageButton';
-import videoFile from '../../assets/production_id_4306405 (2160p).mp4'
+// import videoFile from '../../assets/production_id_4306405 (2160p).mp4'
+import VinylGif from '../../components/LandingPageGif/LandingPageGif';
 import Logo from '../../assets/PartySYNC_Final.png';
 import './LandingPage.css'
 
 const styles = {
-  videoContainer: {
-    position: 'fixed',
-    top: '0',
-    left: '0',
-    width: '100vw',
-    height: '100vh',
-    overflow: 'hidden',
-    zIndex: '-1', // Ensure the video stays in the background
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  video: {
-    width: '100vw',
-    height: '100vh',
-    objectFit: 'cover',
-  },
+  // videoContainer: {
+  //   position: 'fixed',
+  //   top: '0',
+  //   left: '0',
+  //   width: '100vw',
+  //   height: '100vh',
+  //   overflow: 'hidden',
+  //   zIndex: '-1', // Ensure the video stays in the background
+  //   display: 'flex',
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  // },
+  // video: {
+  //   width: '100vw',
+  //   height: '100vh',
+  //   objectFit: 'cover',
+  // },
   Logo: {
     position: 'fixed',
     top: '3.4vh',
@@ -41,7 +42,8 @@ const Image = (props) => {
     <>
      <img src={Logo} alt="Logo" style={styles.Logo} />
     <Button />
-    <div style={styles.videoContainer}>
+    <VinylGif />
+    {/* <div style={styles.videoContainer}>
     <video
   src={props.video}
   autoPlay
@@ -51,13 +53,13 @@ const Image = (props) => {
   controls
   style={styles.video}
 />
-    </div>
+    </div> */}
     </>
   );
 };
 
-Image.defaultProps = {
-  video: videoFile,
-};
+// Image.defaultProps = {
+//   video: videoFile,
+// };
 
 export default Image;
