@@ -17,7 +17,17 @@ const MyInvites = () => {
         const response = await getInvites();
         response.sort((a,b) => new Date(a.party.start_time) - new Date(b.party.start_time));
         console.log(response);
-        setInvites(response);
+        let allInvites = response.map((invite) => ({
+          ...invite,
+          party: {
+            name: invite.party.party_name,
+            description: invite.party.description,
+            location: invite.party.location,
+            startDate: invite.party.start_time,
+            endDate: invite.party.end_time,
+          }
+        }));
+        setInvites(allInvites);
         console.log(`invites`, invites);
       } catch (error){
         console.log(`failed to get invites, `, error);
