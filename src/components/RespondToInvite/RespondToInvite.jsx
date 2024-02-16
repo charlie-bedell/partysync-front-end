@@ -36,7 +36,7 @@ const RespondToInvite = ({ invite_id }) => {
           />
           
         ))}
-        <a href="#" onClick={handleDelete} className="mt-4 text-blue-600 hover:text-blue-800 visited:text-purple-600">
+        <a href="#" onClick={handleClick} className="mt-4 text-blue-600 hover:text-blue-800 visited:text-purple-600">
       Remove Invite
     </a>
       </div>
