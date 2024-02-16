@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../../components/LandingPageButton/LandingPageButton';
-import videoFile from '../../assets/production_id_4306405 (2160p).mp4';
+import videoFile from '../../assets/production_id_4306405 (2160p).mp4'
 import Logo from '../../assets/PartySYNC_Final.png';
 import './LandingPage.css'
 
@@ -47,7 +47,7 @@ const Image = (props) => {
   autoPlay
   muted
   loop
-  playsinline
+  playsInline
   controls
   style={styles.video}
 />
