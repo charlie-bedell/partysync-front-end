@@ -40,6 +40,8 @@ const Home = (props) => {
         let hosted_parties = await getHostedParties();
         hosted_parties = hosted_parties.map((party) => {return {party: party};});
         let allParties = Array.from(invited_parties).concat(hosted_parties);
+        console.log(allParties);
+        allParties.sort((a, b) => new Date(a.party.start_time) - new Date(b.party.start_time));
         allParties = allParties.filter((party) => {return filterConditions[`${partyFilter}`](party);});
         console.log('after filter: ', allParties);
         setAllMyParties([
