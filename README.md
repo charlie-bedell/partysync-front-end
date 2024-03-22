@@ -47,7 +47,6 @@ Deployed Website: https://partysync.netlify.app
 Deployed Server: https://partysync-5fbbda6a7756.herokuapp.com/
 
 Server/Backend GitHub Repo: 
-https://github.com/charlie-bedell/partysync-back-end 
 
 
 ## Technical Architecture
