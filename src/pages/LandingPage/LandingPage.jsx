@@ -40,22 +40,11 @@ const styles = {
 const Image = (props) => {
   return (
     <>
-    <div Style={'position:fixed'}>
+    <div style={{ position: 'fixed'}}>
       <img src={Logo} alt="Logo" style={styles.Logo} />
       <Button />
       <VinylGif />
     </div>
-    {/* <div style={styles.videoContainer}>
-    <video
-  src={props.video}
-  autoPlay
-  muted
-  loop
-  playsInline
-  controls
-  style={styles.video}
-/>
-    </div> */}
     </>
   );
 };

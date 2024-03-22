@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
 const getToken = () => {
   return new Promise((resolve) => {
     const token = localStorage.getItem("token");
@@ -7,7 +8,7 @@ const getToken = () => {
   });
 };
 const api = axios.create({
-  baseURL:"https://partysync-5fbbda6a7756.herokuapp.com"
+  baseURL: import.meta.env.REACT_APP_API_BASE_URL
 });
 
 

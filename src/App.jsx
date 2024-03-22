@@ -13,6 +13,7 @@ import Header from './components/Header/Header.jsx';
 import { useState, useEffect } from 'react';
 import { verifyUser } from './services/users.js';
 
+
 function App() {
 
   const location = useLocation(); // This hook returns the location object
